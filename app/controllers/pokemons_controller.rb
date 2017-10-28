@@ -1,8 +1,8 @@
-class PokemonController < ApplicationController
+class PokemonsController < ApplicationController
 	def capture
 		@pokemon = Pokemon.find(params[:id])
-		@pokemon.trainer_id = current_user
+		@pokemon.trainer_id = current_trainer
 		@pokemon.save
-		redirect_to "home#index"
+		redirect_to "/"
 	end
 end
