@@ -1,4 +1,4 @@
-<%= simple_form_for @pokemon do |pokemon| %>
-  <%= pokemon.input :name %>
-  <%= pokemon.button :submit %>
-<% end %>
+<%= simple_form_for @pokemon do |n|, :method => :post %>
+  <%= n.input :name %>
+  <%= n.button :submit %>
+  <% end %>

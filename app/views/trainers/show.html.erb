@@ -16,5 +16,5 @@
 </table>
 
 <% if @trainer = current_trainer %>
-<p><%= button_to "Create Pokemon", new_path, :class => "button medium", :method => :get %></p>
+<p><%= button_to "Create Pokemon", new_path(id: trainer.id), :class => "button medium", :method => :get %></p>
 <% end %>

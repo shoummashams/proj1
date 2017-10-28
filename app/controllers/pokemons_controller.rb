@@ -30,7 +30,7 @@ class PokemonsController < ApplicationController
 		@pokemon.trainer_id = current_trainer
 		if @pokemon.valid?
 			@pokemon.save
-			redirect_back
+			redirect_to @trainer
 		else
 			flash[:error] = @pokemon.errors.full_messages.to_sentence
 		end
