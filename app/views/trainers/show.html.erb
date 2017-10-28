@@ -14,3 +14,7 @@
 		<% end %>
 	</tbody>
 </table>
+
+<% if @trainer = current_trainer %>
+<p><%= button_to "Create Pokemon", new_path, :class => "button medium", :method => :get %></p>
+<% end %>

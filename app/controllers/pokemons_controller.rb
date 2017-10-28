@@ -17,4 +17,22 @@ class PokemonsController < ApplicationController
 		@trainer = current_trainer
 		redirect_back
 	end
+
+	def new
+		@pokemon = Pokemon.new
+		@trainer = current_trainer
+	end
+
+	def create
+		@pokemon.name = params[:name]
+		@pokemon.health = 100
+		@pokemon.level = 1
+		@pokemon.trainer_id = current_trainer
+		if @pokemon.valid?
+			@pokemon.save
+			redirect_back
+		else
+			flash[:error] = @pokemon.errors.full_messages.to_sentence
+		end
+	end
 end
