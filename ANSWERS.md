@@ -5,6 +5,7 @@ The Pokemon model has not been created yet.
 The home_controller chooses from a list created by the seed, which iterated over a word array to create each Pokemon.
 
 # Question 2a: What does the following line do "<%= button_to "Throw a Pokeball!", capture_path(id: @pokemon), :class => "button medium", :method => :patch %>"? Be specific about what "capture_path(id: @pokemon)" is doing. If you're having trouble, look at the Help section in the README.
+It creates a button that generates a form that sends the information to change data.
 
 # Question 3: What would you name your own Pokemon?
 Shrike
