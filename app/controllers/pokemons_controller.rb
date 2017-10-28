@@ -15,7 +15,7 @@ class PokemonsController < ApplicationController
 			@pokemon.save
 		end
 		@trainer = current_trainer
-		redirect_back
+		redirect_to @trainer
 	end
 
 	def new
